@@ -7,20 +7,17 @@ $c = 3;
 // Add an else clause to the next two statemets
 if ($a < $b) {
     // output the appropriate result
-    echo "$a is less than $b";
+    echo "$a is less than $b\n";
 } else {
-    echo "$a is not less than $b";
+    echo "$a is not less than $b\n";
 }
-
-echo "\n";
 
 if ($b > $a) {
     // output the appropriate result
-    echo "$b is greater than $a";
+    echo "$b is greater than $a\n";
 } else {
-    echo "$b is not greater than $a";
+    echo "$b is not greater than $a\n";
 }
-echo "\n";
 // Shorten the next 2 statements into an if/else
 if ($b >= $c) {
     // output the appropriate result
