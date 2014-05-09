@@ -1,10 +1,10 @@
 <?php
 
-$a = 1;
+$test = 5;
 
-while ($a <=5) {
-	echo "\$a is equal to {$a}.\n";
-	$a++;
+while ($test <=15) {
+	echo "{$test}\n";
+	$test++;
 }
 
 echo "Done!\n"
