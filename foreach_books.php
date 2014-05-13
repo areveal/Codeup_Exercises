@@ -24,8 +24,10 @@ $books = [
 ];
 
 foreach ($books as $title => $book) {
-    echo $title . PHP_EOL;
-    echo "The publish date was " . $book['published']. ", the author was " . $book['author'] . ", and the number of pages is " . $book['pages'] . '.' . PHP_EOL;
+    if($book['published']>1950) {
+        echo $title . PHP_EOL;
+        echo "The publish date was " . $book['published']. ", the author was " . $book['author'] . ", and the number of pages is " . $book['pages'] . '.' . PHP_EOL;
+    }
 }
 
 ?>
