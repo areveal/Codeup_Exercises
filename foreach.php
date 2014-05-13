@@ -37,12 +37,28 @@ $things = array('Sgt. Pepper', "11", null, array(1,2,3), 3.14, "12 + 7", false, 
 // 	echo PHP_EOL;
 // }
 
+// foreach($things as $thing) {
+// 	if(is_scalar($thing)) {
+// 		echo $thing;
+// 	}
+// 	echo PHP_EOL;
+// }
+
 foreach($things as $thing) {
-	if(is_scalar($thing)) {
+	if(is_int($thing)) {
+		echo $thing;
+	} elseif(is_float($thing)) {
+		echo $thing;
+	} elseif(is_bool($thing)) {
+		echo $thing;
+	} elseif(is_array($thing)) {
+		print_r($thing);
+	} elseif(is_null($thing)) {
+		echo $thing;
+	} elseif(is_string($thing)) {
 		echo $thing;
 	}
 	echo PHP_EOL;
 }
-
 
 ?>
