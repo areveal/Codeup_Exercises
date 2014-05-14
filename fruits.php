@@ -6,7 +6,7 @@ $fruits = [
 	'Bananas' => 'yellow',
 	'Watermelons' => 'green and red',
 	'Grapes' => 'green or red',
-	'Tomatos' => 'red'
+	'Tomatoes' => 'red'
 ];
 
 // echo "For:\n";
