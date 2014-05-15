@@ -62,7 +62,7 @@ function modulo($a, $b) {
 
 
 
-
+//test the functions
 
 echo modulo(1,0) . PHP_EOL;
 echo add(1,3) . PHP_EOL;
