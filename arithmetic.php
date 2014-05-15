@@ -16,10 +16,15 @@ function divide($a, $b) {
     echo $a / $b . PHP_EOL;
 }
 
+function modulo($a, $b) {
+	echo $a % $b . PHP_EOL;
+}
+
 add(1,3);
 subtract(5,2);
 multiply(2,5);
 divide(10,5);
+modulo(100,6);//should expect 4
 
 
 ?>
