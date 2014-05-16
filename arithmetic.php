@@ -27,7 +27,7 @@ function numcheck($a, $b) {
 }
 
 
-//Here are the applications of our backbone utilized for operations.
+//Here are the applications of our backbone functions utilized for operations.
 
 function add($a, $b) {
 	if(numcheck($a,$b)) {
