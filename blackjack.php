@@ -1,6 +1,6 @@
 <?php 
 
-$hand = array('A-H', 'Q-D', '4-D');
+$hand = array('A-H', '3-H', '7-D');
 
 function getTotal($hand)
 {
