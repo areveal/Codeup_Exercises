@@ -3,26 +3,27 @@
 // first names
 $names = ['Tina', 'Dana', 'Mike', 'Amy', 'Adam'];
 
-$compare = ['Tina', 'Dana', 'Mel', 'Amy', 'Michael'];
+$compare = ['Tina', 'Don', 'Mel', 'Amy', 'Michael'];
 
-function check($name, $list) {
-	if(array_search($name, $list) !== false){
+function check($needle, $haystack) {
+	if(array_search($needle, $haystack) !== false){
 		return true;
 	} else {
 		return false;
 	}
 }
 
-function compare($array1, $array2) {
+function compare($haystack1, $haystack2) {
 	
-	$common = 0;
+	$names_in_common = 0;
 
-	foreach ($array1 as $name) {
-	 	if(array_search($name, $array2) !== false) {
-	 		$common +=1;
+	foreach ($haystack1 as $needle) {
+	 	$result = check($needle, $haystack2);
+	 	if($result) {
+	 		$names_in_common +=1;
 	 	}	
 	} 
-	return $common;
+	return $names_in_common;
 }
 
 $how_many_same = compare($names, $compare);
