@@ -1,7 +1,12 @@
 <?php 
 
-$hand = array('A-H', '3-H', '7-D');
+//***********************************
+//***********************************
+//         Function List
+//***********************************
+//***********************************
 
+// Create a function that totals the value in our hand
 function getTotal($hand)
 {
     $total = 0;
@@ -12,31 +17,31 @@ function getTotal($hand)
         $hold[] = explode('-', $card);
        
     }
-    for($i = 0; $i < count($hold); $i++) {
-    	switch($hold[$i][0]) {
+    foreach ($hold as $card){
+    	
+        switch($card[0]) {
     	   	case 'A':
     	   		break;
     	   	case 'K':
-    	   		$total +=10;
-    	   		break;
     	   	case 'Q':
-    	   		$total +=10;
-    	   		break;
     	   	case 'J':
-    	   		$total +=10;
-    	   		break;
-    	   	default:
-    	   		$total += (int)$hold[$i][0];
+                $total +=10;
+                break;
+            default:
+    	   		$total += (int)$card[0];
     	   		break;
     	   }
+
     }
-    for($i = 0; $i < count($hold); $i++) {
-    	if($hold[$i][0] == 'A') {
+    foreach ($hold as $card){
+
+    	if($card[0] == 'A') {
     		if(($total + 11) <=	 21) {
     			$total += 11;
     		} else {
     			$total += 1;
     		}
+
     	}
     }
 
@@ -44,12 +49,33 @@ function getTotal($hand)
     return $total;
 }
 
+// Create a function that shows the value of our hand
+function check_value($total) {
+    
+    
+    if($total > 21) {
+        $value = "Your hand busted with a value of " . $total . ".\n";
+    } else {
+        $value = "The value of your hand is " . $total . ".\n";
+    }
+
+    return $value;
+}
+
+
+//***********************************
+//***********************************
+//          Game Begin
+//***********************************
+//***********************************
+
+
+
+$hand = array('A-H', '8-S');
+
 $total = getTotal($hand);
 
-if($total > 21) {
-	echo "Your hand busted with a value of " . $total . ".\n";
-} else {
-	echo "The value of your hand is " . $total . ".\n";
-}
+echo check_value($total);
+
 
  ?>
