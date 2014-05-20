@@ -3,6 +3,8 @@
 function humanized_list($list){
 
 	$array = explode(', ', $list);
+
+	sort($array);
 	
 	//add 'and ' to last element of string
 	$new_last = 'and ' . array_pop($array);
