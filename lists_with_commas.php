@@ -1,10 +1,12 @@
 <?php
 
-function humanized_list($list){
+function humanized_list($list,$sort = false){
 
 	$array = explode(', ', $list);
 
-	sort($array);
+	if($sort === true){
+		sort($array);
+	}
 	
 	//add 'and ' to last element of string
 	$new_last = 'and ' . array_pop($array);
@@ -24,7 +26,7 @@ function humanized_list($list){
 
 $physicists_string = 'Gordon Freeman, Samantha Carter, Sheldon Cooper, Quinn Mallory, Bruce Banner, Tony Stark';
 
-$famous_fake_physicists = humanized_list($physicists_string);
+$famous_fake_physicists = humanized_list($physicists_string,true);
 
 echo "Some of the most famous fictional theoretical physicists are {$famous_fake_physicists}.\n";
 
