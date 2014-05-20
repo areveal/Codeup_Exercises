@@ -6,6 +6,8 @@
 //***********************************
 //***********************************
 
+
+
 // Create a function that totals the value in our hand
 function getTotal($hand)
 {
@@ -63,6 +65,7 @@ function check_value($total) {
 }
 
 
+
 //***********************************
 //***********************************
 //          Game Begin
@@ -71,7 +74,8 @@ function check_value($total) {
 
 
 
-$hand = array('A-H', '8-S');
+
+$hand = array('A-H', '10-S');
 
 $total = getTotal($hand);
 
