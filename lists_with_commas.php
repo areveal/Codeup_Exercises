@@ -18,11 +18,7 @@ function humanized_list($list,$sort = false){
 
 }
 
-
-
-
-
-
+echo PHP_EOL;
 
 $physicists_string = 'Gordon Freeman, Samantha Carter, Sheldon Cooper, Quinn Mallory, Bruce Banner, Tony Stark';
 
@@ -30,8 +26,7 @@ $famous_fake_physicists = humanized_list($physicists_string,true);
 
 echo "Some of the most famous fictional theoretical physicists are {$famous_fake_physicists}.\n";
 
-
-
+echo PHP_EOL;
 
 
 ?>
